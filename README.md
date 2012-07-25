@@ -1,4 +1,5 @@
-Pane_Freeze
-===========
+# [Pane Freeze](http://getsetbro.com/Pane_Freeze/frozen-header-and-first-col.html)
 
-Freeze the panes of HTML tables and make sure they scroll together.
+Freezing the panes of HTML tables and making sure they scroll together.
+
+Example: <a href="http://getsetbro.com/Pane_Freeze/frozen-header-and-first-col.html">http://getsetbro.com/Pane_Freeze/frozen-header-and-first-col.html</a>
