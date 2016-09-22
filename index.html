@@ -9,7 +9,7 @@
 		h1{text-align: center;color:#999;text-shadow: 0 -1px 0 #000}
 		/*pf specific*/
 		.panefreeze{width:800px;margin: 0 auto;position: relative;height:500px;background-color: #eee}
-		.panefreeze,.panefreeze *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+		.panefreeze,.panefreeze *{box-sizing: border-box;}
 		.panefreeze ::-webkit-scrollbar {width:9px;height:9px;}
 		.panefreeze ::-webkit-scrollbar-button:start:decrement,
 		.panefreeze ::-webkit-scrollbar-button:end:increment {background-color: #ccc;}
@@ -28,9 +28,11 @@
 		.pf-L{width: 120px}
 		.pf-LB-tb,.pf-LT-th{width:100%}
 		.panefreeze th,.panefreeze td{padding:0 10px;height:33px}
-		.panefreeze th{text-transform:uppercase;background-color:#ccc;background-image: -webkit-linear-gradient(top, #ccc, #bbb);background-image: -moz-linear-gradient(top, #ccc, #bbb);background-image: -ms-linear-gradient(top, #ccc, #bbb);background-image: linear-gradient(to bottom, #ccc, #bbb);}
+		.panefreeze th{text-transform:uppercase;background-color:#ccc;
+			background-image: linear-gradient(to bottom, #ccc, #bbb);}
 		.pf-R th{border-right: 1px solid #aaa;}
-		.panefreeze td{border-bottom:1px solid #aaa;text-align: center;background-color: #EEE;background-image: -webkit-linear-gradient(top, #eee, #ccc);background-image: -moz-linear-gradient(top, #eee, #ccc);background-image: -ms-linear-gradient(top, #eee, #ccc);background-image: linear-gradient(to bottom, #eee, #ccc);}
+		.panefreeze td{border-bottom:1px solid #aaa;text-align: center;background-color: #EEE;
+			background-image: linear-gradient(to bottom, #eee, #ccc);}
 		.pf-R td{border-right:1px solid #ccc}
 		/**/
 
@@ -86,9 +88,9 @@
 		$('.pf-RT-tb tr').first().find('td').each(function(){
 			var $this = $(this),
 				ndx = $this.index(),
-				tdWdth = $this.outerWidth(),
+				tdWdth = $this.width(),
 				thEq = $('.pf-RT-th th').eq(ndx),
-				thWdth = thEq.outerWidth();
+				thWdth = thEq.width();
 			if(tdWdth < thWdth){
 				$this.width(thWdth);
 			}else{

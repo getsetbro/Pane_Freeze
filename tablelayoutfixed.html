@@ -90,9 +90,9 @@
 		$('.pf-RT-tb tr').first().find('td').each(function(){
 			var $this = $(this),
 				ndx = $this.index(),
-				tdWdth = $this.outerWidth(),
+				tdWdth = $this.width(),
 				thEq = $('.pf-RT-th th').eq(ndx),
-				thWdth = thEq.outerWidth();
+				thWdth = thEq.width();
 			if(tdWdth < thWdth){
 				$this.width(thWdth);
 			}else{
